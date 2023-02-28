@@ -1,4 +1,4 @@
-// import React, { Component } from 'react';
+import { PropTypes } from 'prop-types';
 import { Formik, Field } from 'formik';
 import * as yup from 'yup';
 import { nanoid } from 'nanoid';
@@ -61,3 +61,7 @@ const schema = yup.object().shape({
     .max(13, 'To Long')
     .required('Required'),
 });
+
+ContactForm.propTypes = {
+  onSave: PropTypes.func.isRequired,
+};
