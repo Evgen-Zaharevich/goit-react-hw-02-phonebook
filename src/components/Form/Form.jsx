@@ -1,8 +1,14 @@
 import { PropTypes } from 'prop-types';
-import { Formik, Field } from 'formik';
+import { Formik } from 'formik';
 import * as yup from 'yup';
 import { nanoid } from 'nanoid';
-import { FormField, ErrorMessage, Form } from 'components/Form/Form.styled';
+import {
+  FormField,
+  ErrorMessage,
+  Form,
+  Field,
+  Button,
+} from 'components/Form/Form.styled';
 
 export const ContactForm = ({ onSave }) => {
   return (
@@ -43,7 +49,7 @@ export const ContactForm = ({ onSave }) => {
           />
           <ErrorMessage name="number" component="p" />
         </FormField>
-        <button type="submit">Add Contact</button>
+        <Button type="submit">Add Contact</Button>
       </Form>
     </Formik>
   );

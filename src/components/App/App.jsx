@@ -4,6 +4,12 @@ import { Section } from 'components/Section/Section';
 import { Contacts } from 'components/Contacts/Contacts';
 import { Filter } from 'components/Filter/Filter';
 
+import {
+  Container,
+  ContainerPhonebook,
+  ContainerContacts,
+} from 'components/App/App.styled';
+
 export class App extends Component {
   state = {
     contacts: [
@@ -61,16 +67,22 @@ export class App extends Component {
 
     return (
       <>
-        <Section title={'Phonebook'}>
-          <ContactForm onSave={this.addNewContact} />
-        </Section>
-        <Section title={'Contacts'}>
-          <Filter onInputFilter={this.handleInputFilter} />
-          <Contacts
-            contacts={showFilteredContacts}
-            onDeleteUser={this.deleteUser}
-          />
-        </Section>
+        <Container>
+          <ContainerPhonebook>
+            <Section title={'Phonebook'}>
+              <ContactForm onSave={this.addNewContact} />
+            </Section>
+          </ContainerPhonebook>
+          <ContainerContacts>
+            <Section title={'Contacts'}>
+              <Filter onInputFilter={this.handleInputFilter} />
+              <Contacts
+                contacts={showFilteredContacts}
+                onDeleteUser={this.deleteUser}
+              />
+            </Section>
+          </ContainerContacts>
+        </Container>
       </>
     );
   }

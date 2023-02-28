@@ -1,10 +1,11 @@
 import { PropTypes } from 'prop-types';
+import { Text, Input } from 'components/Filter/Filter.styled';
 
 export function Filter({ onInputFilter }) {
   return (
     <>
-      <p>Find contacts by name</p>
-      <input type="text" onChange={onInputFilter} />
+      <Text>Find contacts by name</Text>
+      <Input type="text" onChange={onInputFilter} />
     </>
   );
 }
