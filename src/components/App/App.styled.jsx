@@ -9,7 +9,7 @@ export const Container = styled.div`
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 620px;
+  height: 649px;
 `;
 
 export const ContainerPhonebook = styled.div`
@@ -20,4 +20,14 @@ export const ContainerPhonebook = styled.div`
 
 export const ContainerContacts = styled.div`
   margin-left: 100px;
+`;
+
+export const BGI = styled.div`
+  display: inline-block;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-image: url(https://kartinkin.net/uploads/posts/2021-07/thumbs/1627596321_20-kartinkin-com-p-potertaya-kraska-tekstura-krasivo-22.jpg);
 `;

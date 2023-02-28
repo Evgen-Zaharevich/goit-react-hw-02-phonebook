@@ -8,6 +8,7 @@ import {
   Container,
   ContainerPhonebook,
   ContainerContacts,
+  BGI,
 } from 'components/App/App.styled';
 
 export class App extends Component {
@@ -67,22 +68,24 @@ export class App extends Component {
 
     return (
       <>
-        <Container>
-          <ContainerPhonebook>
-            <Section title={'Phonebook'}>
-              <ContactForm onSave={this.addNewContact} />
-            </Section>
-          </ContainerPhonebook>
-          <ContainerContacts>
-            <Section title={'Contacts'}>
-              <Filter onInputFilter={this.handleInputFilter} />
-              <Contacts
-                contacts={showFilteredContacts}
-                onDeleteUser={this.deleteUser}
-              />
-            </Section>
-          </ContainerContacts>
-        </Container>
+        <BGI>
+          <Container>
+            <ContainerPhonebook>
+              <Section title={'Phonebook'}>
+                <ContactForm onSave={this.addNewContact} />
+              </Section>
+            </ContainerPhonebook>
+            <ContainerContacts>
+              <Section title={'Contacts'}>
+                <Filter onInputFilter={this.handleInputFilter} />
+                <Contacts
+                  contacts={showFilteredContacts}
+                  onDeleteUser={this.deleteUser}
+                />
+              </Section>
+            </ContainerContacts>
+          </Container>
+        </BGI>
       </>
     );
   }

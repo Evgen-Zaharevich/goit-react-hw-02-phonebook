@@ -15,4 +15,11 @@ export const ListItem = styled.li`
 
 export const Button = styled.button`
   margin-left: 25px;
+  border: none;
+  background-color: inherit;
+  font-weight: 500;
+
+  &:hover {
+    color: red;
+  }
 `;
